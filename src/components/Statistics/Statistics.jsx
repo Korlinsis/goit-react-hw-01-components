@@ -1,29 +1,18 @@
 import PropTypes from 'prop-types';
-import { StattisticsDiv } from './Statistics.styled';
+import { StattisticsDiv, Title, StatList, StatItem, StatLabel, StatPercentage } from './Statistics.styled';
 
 const Statistics = ({ title, stats }) => {
     return (
         <StattisticsDiv>
-            <h2 className="title">{title}</h2>
-
-            <ul className="stat-list">
-                <li className="item">
-                    <span className="label">.docx</span>
-                    <span className="percentage">4%</span>
-                </li>
-                <li className="item">
-                    <span className="label">.mp3</span>
-                    <span className="percentage">14%</span>
-                </li>
-                <li className="item">
-                    <span className="label">.pdf</span>
-                    <span className="percentage">41%</span>
-                </li>
-                <li className="item">
-                    <span className="label">.mp4</span>
-                    <span className="percentage">12%</span>
-                </li>
-            </ul>
+            <Title>{title}</Title>
+            <StatList>
+                {stats.map(stat => (
+                    <StatItem key={stat.id} style={{width: `${100 / stats.length}%`}}>
+                        <StatLabel>{stat.label}</StatLabel>
+                        <StatPercentage>{stat.percentage}%</StatPercentage>
+                    </StatItem>
+                ))}
+            </StatList>
         </StattisticsDiv>
     );
 };
