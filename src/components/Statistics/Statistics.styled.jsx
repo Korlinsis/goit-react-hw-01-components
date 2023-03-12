@@ -1,11 +1,13 @@
 import styled from '@emotion/styled';
 
-export const StattisticsDiv = styled.section`
+export const StattisticsContainer = styled.section`
     margin: 0 auto 100px;
     width: 350px;
     background-color: #ffffff;
     border-radius: 5px;
     overflow: hidden;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+        0px 2px 2px rgba(0, 0, 0, 0.12);
 `;
 
 export const Title = styled.h2`

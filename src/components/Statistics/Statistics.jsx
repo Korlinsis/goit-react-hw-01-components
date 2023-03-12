@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
-import { StattisticsDiv, Title, StatList, StatItem, StatLabel, StatPercentage } from './Statistics.styled';
+import { StattisticsContainer, Title, StatList, StatItem, StatLabel, StatPercentage } from './Statistics.styled';
 
 const Statistics = ({ title, stats }) => {
     return (
-        <StattisticsDiv>
+        <StattisticsContainer>
             {title && (<Title>{title}</Title>)}
             <StatList>
                 {stats.map(stat => (
@@ -13,7 +13,7 @@ const Statistics = ({ title, stats }) => {
                     </StatItem>
                 ))}
             </StatList>
-        </StattisticsDiv>
+        </StattisticsContainer>
     );
 };
 
