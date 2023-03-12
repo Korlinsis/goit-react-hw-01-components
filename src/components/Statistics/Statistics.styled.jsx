@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 export const StattisticsDiv = styled.section`
-    margin: 0 auto;
+    margin: 0 auto 100px;
     width: 350px;
     background-color: #ffffff;
     border-radius: 5px;

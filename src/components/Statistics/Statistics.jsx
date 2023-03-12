@@ -4,7 +4,7 @@ import { StattisticsDiv, Title, StatList, StatItem, StatLabel, StatPercentage } 
 const Statistics = ({ title, stats }) => {
     return (
         <StattisticsDiv>
-            <Title>{title}</Title>
+            {title && (<Title>{title}</Title>)}
             <StatList>
                 {stats.map(stat => (
                     <StatItem key={stat.id} style={{width: `${100 / stats.length}%`}}>
